@@ -1,0 +1,8 @@
+# Development requirements
+# Install with: pip install -r requirements-dev.txt
+
+discord.py
+python-dotenv
+
+# Production only uses discord.py (requirements.txt)
+# Development adds python-dotenv for .env file support
