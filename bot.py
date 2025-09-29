@@ -656,6 +656,45 @@ async def worldremit(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.command()
+async def status(ctx):
+    """Display current bot and service status information."""
+
+    embed = discord.Embed(
+        title="📊 Omegaberg Bot Status",
+        description="Current status of our Discord bot and services",
+        color=discord.Color.green()
+    )
+
+    embed.add_field(
+        name="🤖 Bot Status",
+        value="✅ **Online and Operational**\n🔄 All commands functioning normally",
+        inline=False
+    )
+
+    embed.add_field(
+        name="💳 Payment Services",
+        value="✅ **All payment methods available**\n• Revolut, Remitly, WorldRemit\n• Skrill and processor payments active",
+        inline=False
+    )
+
+    embed.add_field(
+        name="🛠️ Available Commands",
+        value="**Information Commands:**\n`!!nopaypal`, `!!revolut`, `!!remitly`, `!!procinfo`\n`!!key`, `!!skrill`, `!!worldremit`, `!!status`",
+        inline=False
+    )
+
+    embed.add_field(
+        name="📞 Support",
+        value="For assistance, create a support ticket or contact staff members.",
+        inline=False
+    )
+
+    embed.set_footer(text="Status updated automatically • All systems operational")
+    embed.set_author(name="Omegaberg | Official Shop")
+
+    await ctx.send(embed=embed)
+
 @bot.event
 async def on_ready():
     # Sync slash commands to all guilds the bot is in
