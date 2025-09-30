@@ -5,6 +5,13 @@ from discord import app_commands
 from discord.ext import commands
 from discord.ui import View, Button
 
+# Load .env file for local development (production-safe)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # dotenv not installed, skip loading (production environments)
+
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 # Put the target channel IDs here (ints, not strings)
@@ -680,7 +687,7 @@ async def status(ctx):
 
     embed.add_field(
         name="🛠️ Available Commands",
-        value="**Information Commands:**\n`!!nopaypal`, `!!revolut`, `!!remitly`, `!!procinfo`\n`!!key`, `!!skrill`, `!!worldremit`, `!!status`",
+        value="**Information Commands:**\n`!!nopaypal`, `!!revolut`, `!!remitly`, `!!procinfo`\n`!!key`, `!!skrill`, `!!worldremit`, `!!createorder`, `!!status`",
         inline=False
     )
 
@@ -691,6 +698,37 @@ async def status(ctx):
     )
 
     embed.set_footer(text="Status updated automatically • All systems operational")
+    embed.set_author(name="Omegaberg | Official Shop")
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def createorder(ctx):
+    """Display instructions for creating an order on Omegaberg."""
+
+    embed = discord.Embed(
+        title="📦 How to Create an Order",
+        description="Welcome! Follow these simple steps to create your order on Omegaberg:",
+        color=discord.Color.blue()
+    )
+
+    embed.add_field(
+        name="📝 Step-by-Step Instructions",
+        value=(
+            "1️⃣ Create an account on https://omegaberg.com\n"
+            "2️⃣ Go to the store and click on the product you want to purchase\n"
+            "3️⃣ Click on your desired product subscription, then add to cart\n"
+            "4️⃣ Click 'Review and Checkout'\n"
+            "   • Address is not required\n"
+            "   • No need to pay at this step\n"
+            "5️⃣ Choose **'Manual'** under payment method\n"
+            "6️⃣ Click **'Place order and pay'**\n"
+            "7️⃣ Send your order number to support (e.g., Order #23455)"
+        ),
+        inline=False
+    )
+
+    embed.set_footer(text="Need help? Create a support ticket or contact staff members!")
     embed.set_author(name="Omegaberg | Official Shop")
 
     await ctx.send(embed=embed)
