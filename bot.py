@@ -590,7 +590,7 @@ async def skrill(ctx):
         value=(
             "1️⃣ Login to Skrill\n"
             "2️⃣ Choose send money (skrill to skrill)\n"
-            "3️⃣ **Account email:** alex.killerproT@gmail.com\n"
+            "3️⃣ **Account email:** alex.killerpro1@gmail.com\n"
             "4️⃣ When sending payments, use the skrill calculator for money conversion\n"
             "5️⃣ Click send\n"
             "6️⃣ **DO NOT ADD A MESSAGE OR NOTE WHEN SENDING PAYMENT**\n"
