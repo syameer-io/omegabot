@@ -687,7 +687,7 @@ async def status(ctx):
 
     embed.add_field(
         name="🛠️ Available Commands",
-        value="**Information Commands:**\n`!!nopaypal`, `!!revolut`, `!!remitly`, `!!procinfo`\n`!!key`, `!!skrill`, `!!worldremit`, `!!createorder`, `!!status`",
+        value="**Information Commands:**\n`!!nopaypal`, `!!revolut`, `!!remitly`, `!!procinfo`\n`!!key`, `!!skrill`, `!!worldremit`, `!!createorder`, `!!vouchhok`, `!!status`",
         inline=False
     )
 
@@ -729,6 +729,138 @@ async def createorder(ctx):
     )
 
     embed.set_footer(text="Need help? Create a support ticket or contact staff members!")
+    embed.set_author(name="Omegaberg | Official Shop")
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def vouchhok(ctx):
+    """Display review links and discount information."""
+
+    embed = discord.Embed(
+        title="⭐ Don't Forget to Leave Us a Review! ⭐",
+        description="Your feedback helps us improve and grow!",
+        color=discord.Color.gold()
+    )
+
+    embed.add_field(
+        name="📝 Where to Leave Your Review",
+        value=(
+            "1️⃣ **EPVP:** https://www.elitepvpers.com/forum/mobile-games-trading/5332668-honor-kings-hack-map-hack-aim-assist-cd-display-auto-skills-more.html#post40449937\n\n"
+            "2️⃣ **Discord:** https://discord.com/channels/1389295115931222036/1389318523288817675\n\n"
+            "3️⃣ **Our Forum:** https://omegaberg.com/forum/7-customer-reviews/"
+        ),
+        inline=False
+    )
+
+    embed.add_field(
+        name="🎁 Earn Discounts!",
+        value=(
+            "Writing us a review will give you up to **10% discount** depending on "
+            "how many products you bought. The more you buy, the higher discounts "
+            "you will get as long as YOU WRITE A REVIEW!"
+        ),
+        inline=False
+    )
+
+    embed.add_field(
+        name="💰 How to Get Your Coupon",
+        value=(
+            "Please kindly write a review on the links above and let us know once "
+            "you're done so we can give you coupon codes for the DISCOUNTS!"
+        ),
+        inline=False
+    )
+
+    embed.set_footer(text="Your reviews help us grow! Thank you for your support.")
+    embed.set_author(name="Omegaberg | Official Shop")
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def voucharcomega(ctx):
+    """Display review links for ARC Omega product."""
+
+    embed = discord.Embed(
+        title="⭐ Don't Forget to Leave Us a Review! ⭐",
+        description="Your feedback helps us improve and grow!",
+        color=discord.Color.gold()
+    )
+
+    embed.add_field(
+        name="📝 Where to Leave Your Review",
+        value=(
+            "1️⃣ **EPVP:** https://www.elitepvpers.com/forum/arc-raiders-trading/5329069-omegabergs-arc-raiders-private-trusted-seller-ud-since-release-aimbot-esp.html\n\n"
+            "2️⃣ **Discord:** https://discord.com/channels/1389295115931222036/1389318523288817675\n\n"
+            "3️⃣ **Our Forum:** https://omegaberg.com/forum/7-customer-reviews/"
+        ),
+        inline=False
+    )
+
+    embed.add_field(
+        name="🎁 Earn Discounts!",
+        value=(
+            "Writing us a review will give you up to **10% discount** depending on "
+            "how many products you bought. The more you buy, the higher discounts "
+            "you will get as long as YOU WRITE A REVIEW!"
+        ),
+        inline=False
+    )
+
+    embed.add_field(
+        name="💰 How to Get Your Coupon",
+        value=(
+            "Please kindly write a review on the links above and let us know once "
+            "you're done so we can give you coupon codes for the DISCOUNTS!"
+        ),
+        inline=False
+    )
+
+    embed.set_footer(text="Your reviews help us grow! Thank you for your support.")
+    embed.set_author(name="Omegaberg | Official Shop")
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def vouchdiv2(ctx):
+    """Display review links for Division 2 product."""
+
+    embed = discord.Embed(
+        title="⭐ Don't Forget to Leave Us a Review! ⭐",
+        description="Your feedback helps us improve and grow!",
+        color=discord.Color.gold()
+    )
+
+    embed.add_field(
+        name="📝 Where to Leave Your Review",
+        value=(
+            "1️⃣ **EPVP:** https://www.elitepvpers.com/forum/division-trading/4962495-division-2-private-hack-powerful-features-rapid-fire-esp-infinite-ammo-more.html\n\n"
+            "2️⃣ **Discord:** https://discord.com/channels/1389295115931222036/1389318523288817675\n\n"
+            "3️⃣ **Our Forum:** https://omegaberg.com/forum/7-customer-reviews/"
+        ),
+        inline=False
+    )
+
+    embed.add_field(
+        name="🎁 Earn Discounts!",
+        value=(
+            "Writing us a review will give you up to **10% discount** depending on "
+            "how many products you bought. The more you buy, the higher discounts "
+            "you will get as long as YOU WRITE A REVIEW!"
+        ),
+        inline=False
+    )
+
+    embed.add_field(
+        name="💰 How to Get Your Coupon",
+        value=(
+            "Please kindly write a review on the links above and let us know once "
+            "you're done so we can give you coupon codes for the DISCOUNTS!"
+        ),
+        inline=False
+    )
+
+    embed.set_footer(text="Your reviews help us grow! Thank you for your support.")
     embed.set_author(name="Omegaberg | Official Shop")
 
     await ctx.send(embed=embed)
